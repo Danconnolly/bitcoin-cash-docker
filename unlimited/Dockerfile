@@ -1,6 +1,5 @@
 FROM debian:stretch-slim
 
-ENV GLIBC_VERSION=2.26-r0
 ENV BCH_VERSION 1.1.2.0
 ENV BCH_URL https://www.bitcoinunlimited.info/downloads/BUcash-1.1.2.0-linux64.tar.gz
 ENV BCH_SHA256 cd12e77ba3fb5d744a74d1f3d58fbd60c1f96a35db6ebcfcee21810d49e2e2e9
