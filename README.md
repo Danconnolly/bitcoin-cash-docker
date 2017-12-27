@@ -6,11 +6,12 @@ Docker images for Bitcoin Cash, see https://hub.docker.com/r/dconnolly/bitcoin-c
 
 ## Quick Start
 
-Simple container: `docker run -it --name bchunlim dconnolly/bitcoin-cash:latest`
+* simple Unlimited node: `docker run -it --name bchunlim dconnolly/bitcoin-cash:latest`
+* simple ABC node: `docker run -it --name bchabc dconnolly/bitcoin-cash:abc`
 
 To use `bitcoin-cli` you can use something like
 ````
-docker exec --user bitcoin $(docker ps --filter name=bchunlim -q) bitcoin-cli -conf=/home/bitcoin/bitcoin.conf
+docker exec --user bitcoin $(docker ps --filter name=bchunlim -q) bitcoin-cli -conf=/home/bitcoin/bitcoin.conf getinfo
 ````
 
 ## Data 
