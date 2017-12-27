@@ -2,8 +2,8 @@
 Docker images for Bitcoin Cash, see https://hub.docker.com/r/dconnolly/bitcoin-cash/
 
 ## Versions
-* Bitcoin Unlimited Cash v1.1.2.0 - latest, unlimited, unlimited-1.1.2.0
-* Bitcoin ABC v0.16.1 - abc, abc-0.16.1
+* latest, unlimited, unlimited-1.1.2.0 - [Bitcoin Unlimited Cash v1.1.2.0]
+* abc, abc-0.16.1 - Bitcoin ABC v0.16.1
 
 ## Quick Start
 
