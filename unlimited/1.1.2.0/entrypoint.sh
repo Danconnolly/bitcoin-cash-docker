@@ -17,6 +17,7 @@ if [[ "$1" == "bitcoin-cli" || "$1" == "bitcoin-tx" || "$1" == "bitcoind" || "$1
 		EOF
 	else
 		cp "$BCH_DATA/bitcoin.conf" /home/bitcoin/bitcoin.conf
+		chmod ug+rw /home/bitcoin/bitcoin.conf
 	fi
 	echo "rpcpassword=${BCH_RPC_PASSWORD:-$(cat /dev/urandom | tr -dc _A-Z-a-z-0-9 | head -c16)}" >> /home/bitcoin/bitcoin.conf
 	echo "rpcuser=${BCH_RPC_USER:-$(cat /dev/urandom | tr -dc _A-Z-a-z-0-9 | head -c16)}" >> /home/bitcoin/bitcoin.conf
