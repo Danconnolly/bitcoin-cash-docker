@@ -1,10 +1,12 @@
 # bitcoin-cash-docker
 Docker images for Bitcoin Cash, see https://hub.docker.com/r/dconnolly/bitcoin-cash/
 
-## Versions
+## Tags & Versions
 * latest, unlimited, unlimited-1.2.0.0 - [Bitcoin Unlimited Cash v1.2.0.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.2.0.0/Dockerfile)
-* unlimited-1.1.2.0 - [Bitcoin Unlimited Cash v1.1.2.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.1.2.0/Dockerfile)
 * abc, abc-0.16.2 - [Bitcoin ABC v0.16.2](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.2/Dockerfile)
+
+Older versions:
+* unlimited-1.1.2.0 - [Bitcoin Unlimited Cash v1.1.2.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.1.2.0/Dockerfile)
 *  abc-0.16.1 - [Bitcoin ABC v0.16.1](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.1/Dockerfile)
 
 ## Quick Start
@@ -47,6 +49,7 @@ docker run -it --rm -p 8332:8332 -e BCH_RPC_USER='user' -e BCH_RPC_PASSWORD='abc
 ````
 You can then use bitcoin-cli from the docker host using something like `bitcoin-cli -rpcuser=user -rpcpassword=abcde getinfo`
 
+### Docker Swarm Service Example
 Create a docker swarm service:
 ````
 docker service create --name bchunlim \
@@ -60,6 +63,7 @@ docker service create --name bchunlim \
 	dconnolly/bitcoin-cash
 ````
 
+### Docker Stack Example
 Docker stack using a compose file. Deploy using `docker stack deploy -c docker-compose.yml`:
 ````
 version: "3.5"
