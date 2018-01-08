@@ -1,5 +1,5 @@
 # bitcoin-cash-docker
-Docker images for Bitcoin Cash, see https://hub.docker.com/r/dconnolly/bitcoin-cash/
+Docker images for Bitcoin Cash.
 
 ## Tags & Versions
 * latest, unlimited, unlimited-1.2.0.0 - [Bitcoin Unlimited Cash v1.2.0.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.2.0.0/Dockerfile)
