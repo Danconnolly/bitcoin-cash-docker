@@ -1,8 +1,7 @@
 #!/bin/bash
 
-VER=1.1.2.0
+VER=1.2.0.0
 
 docker build -t dconnolly/bitcoin-cash:latest -t dconnolly/bitcoin-cash:unlimited -t dconnolly/bitcoin-cash:unlimited-$VER .
 
-docker push dconnolly/bitcoin-cash:unlimited-$VER
 

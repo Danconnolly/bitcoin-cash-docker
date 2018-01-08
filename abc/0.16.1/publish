@@ -4,6 +4,5 @@ VER=0.16.1
 
 docker build -t dconnolly/bitcoin-cash:abc -t dconnolly/bitcoin-cash:abc-$VER .
 
-docker push dconnolly/bitcoin-cash:abc
 docker push dconnolly/bitcoin-cash:abc-$VER
 

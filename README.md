@@ -2,7 +2,8 @@
 Docker images for Bitcoin Cash, see https://hub.docker.com/r/dconnolly/bitcoin-cash/
 
 ## Versions
-* latest, unlimited, unlimited-1.1.2.0 - [Bitcoin Unlimited Cash v1.1.2.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.1.2.0/Dockerfile)
+* latest, unlimited, unlimited-1.2.0.0 - [Bitcoin Unlimited Cash v1.2.0.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.2.0.0/Dockerfile)
+* unlimited-1.1.2.0 - [Bitcoin Unlimited Cash v1.1.2.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.1.2.0/Dockerfile)
 * abc, abc-0.16.2 - [Bitcoin ABC v0.16.2](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.2/Dockerfile)
 *  abc-0.16.1 - [Bitcoin ABC v0.16.1](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.1/Dockerfile)
 
@@ -59,4 +60,52 @@ docker service create --name bchunlim \
 	dconnolly/bitcoin-cash
 ````
 
+Docker stack using a compose file. Deploy using `docker stack deploy -c docker-compose.yml`:
+````
+version: "3.5"
+
+services:
+  bchunlim:
+    image: dconnolly/bitcoin-cash:latest
+    volumes:
+      - bch-data:/data
+    networks:
+      - bch
+    ports:
+      - target: 8333
+        published: 8333
+        protocol: tcp
+        mode: host
+    configs:
+      - source: bchconf
+        target: /data/bitcoin.conf
+    secrets:
+      - bchrpcuser
+      - bchrpcpassword
+    hostname: bchunlim
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 300s
+
+networks:
+  bch:
+    driver: overlay
+
+volumes:
+  bch-data:
+
+secrets:
+  bchrpcuser:
+    external: true
+  bchrpcpassword:
+    external: true
+
+configs:
+  bchconf:
+    file: ./bitcoin.conf
+````
 
