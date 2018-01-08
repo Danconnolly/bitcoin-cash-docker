@@ -1,7 +1,0 @@
-#!/bin/bash
-
-VER=0.16.1
-
-docker build -t dconnolly/bitcoin-cash:abc-$VER .
-
-

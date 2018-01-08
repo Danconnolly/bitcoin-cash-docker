@@ -1,7 +1,0 @@
-#!/bin/bash
-
-VER=1.1.2.0
-
-docker build -t dconnolly/bitcoin-cash:unlimited-$VER .
-
-
