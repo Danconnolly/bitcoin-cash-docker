@@ -2,13 +2,13 @@
 Docker images for Bitcoin Cash.
 
 ## Tags & Versions
-* latest, unlimited, unlimited-1.2.0.1 - [Bitcoin Unlimited Cash v1.2.0.1](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.2.0.1/Dockerfile)
-* abc, abc-0.16.2 - [Bitcoin ABC v0.16.2](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.2/Dockerfile)
+* latest, unlimited, unlimited-1.2, unlimited-1.2.0.1 - [Bitcoin Unlimited Cash v1.2.0.1](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.2.0.1/Dockerfile)
+* abc, abc-0.17, abc-0.17.0 - [Bitcoin ABC v0.17.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.17.0/Dockerfile)
 
 Older versions:
 * unlimited-1.2.0.0 - [Bitcoin Unlimited Cash v1.2.0.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.2.0.0/Dockerfile)
-* unlimited-1.1.2.0 - [Bitcoin Unlimited Cash v1.1.2.0](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/unlimited/1.1.2.0/Dockerfile)
-*  abc-0.16.1 - [Bitcoin ABC v0.16.1](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.1/Dockerfile)
+* abc-0.16, abc-0.16.2 - [Bitcoin ABC v0.16.2](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.2/Dockerfile)
+* abc-0.16.1 - [Bitcoin ABC v0.16.1](https://github.com/Danconnolly/bitcoin-cash-docker/blob/master/abc/0.16.1/Dockerfile)
 
 ## Quick Start
 
